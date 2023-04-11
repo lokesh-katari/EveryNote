@@ -4,6 +4,8 @@ const fetchUser =require('../middleware/fetchUser');
 const  Note = require("../Models/Note");
 const { body,validationResult } = require('express-validator');
 // Define authentication routes
+
+
 router.get('/fetchnotes',fetchUser,async (req, res) => {
 
 try {
