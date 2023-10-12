@@ -6,6 +6,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Home from "./components/Home";
 import NoteState from "./context/NoteState";
+import Main from "./components/Main";
 function App() {
   return (
     <>
@@ -14,7 +15,8 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/Login" element={<Login />} />
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Main />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/Register" element={<Register />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>

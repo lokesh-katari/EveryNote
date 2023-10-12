@@ -14,11 +14,12 @@ connectToMongo();
 
 app.use('/api/auth',require("./Routers/auth"));
 app.use('/api/note',require("./Routers/note"));
+app.use('/api/images',require("./Routers/imageroute"));
 
 
 
 // app listening at port 
-app.listen(PORT, function (err) {
+app.listen(PORT, function (err) {   
 	if (err) console.log(err);
 	console.log("Server listening on PORT", PORT);
 });  
