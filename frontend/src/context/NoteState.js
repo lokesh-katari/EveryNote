@@ -10,7 +10,7 @@ const NoteState = (props) => {
   const addnote = async (note) => {
     //for api call in backend
     try {
-      const res = await fetch(`${port}/api/note/addnote`, {
+      const res = await fetch(`/api/note/addnote`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -44,7 +44,7 @@ const NoteState = (props) => {
   };
   const fetchNotes = async () => {
     try {
-      const res = await fetch(`${port}/api/note/fetchnotes`, {
+      const res = await fetch(`/api/note/fetchnotes`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -63,7 +63,7 @@ const NoteState = (props) => {
   const deletenote = async (id) => {
     //for api call in backend
     try {
-      await fetch(`${port}/api/note/deletenote/${id}`, {
+      await fetch(`/api/note/deletenote/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -84,7 +84,7 @@ const NoteState = (props) => {
   //state for update a note
   const updatenote = async (id, title, description, tag) => {
     // API Call
-    const res = await fetch(`${port}/api/note/updatenote/${id}`, {
+    const res = await fetch(`/api/note/updatenote/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
